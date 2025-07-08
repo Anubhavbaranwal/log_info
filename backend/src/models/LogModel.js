@@ -46,22 +46,18 @@ class LogModel {
   filterLogs(filters) {
     const logs = this.readLogs();
     return logs.filter(log => {
-      // Level filter
       if (filters.level && log.level !== filters.level) {
         return false;
       }
 
-      // Message full-text search (case-insensitive)
       if (filters.message && !log.message.toLowerCase().includes(filters.message.toLowerCase())) {
         return false;
       }
 
-      // ResourceId filter
-      if (filters.resourceId && log.resourceId !== filters.resourceId) {
+      if (filters.resourceId && !log.resourceId.toLowerCase().includes(filters.resourceId.toLowerCase())) {
         return false;
       }
 
-      // Timestamp range filter
       if (filters.timestamp_start) {
         const logTime = new Date(log.timestamp);
         const startTime = new Date(filters.timestamp_start);
@@ -78,18 +74,15 @@ class LogModel {
         }
       }
 
-      // TraceId filter
-      if (filters.traceId && log.traceId !== filters.traceId) {
+      if (filters.traceId && !log.traceId.toLowerCase().includes(filters.traceId.toLowerCase())) {
         return false;
       }
 
-      // SpanId filter
-      if (filters.spanId && log.spanId !== filters.spanId) {
+      if (filters.spanId && !log.spanId.toLowerCase().includes(filters.spanId.toLowerCase())) {
         return false;
       }
 
-      // Commit filter
-      if (filters.commit && log.commit !== filters.commit) {
+      if (filters.commit && !log.commit.toLowerCase().includes(filters.commit.toLowerCase())) {
         return false;
       }
 
