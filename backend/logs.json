@@ -1,0 +1,81 @@
+[
+  {
+    "level": "error",
+    "message": "Database connection failed: Connection timeout after 30 seconds",
+    "resourceId": "server-1234",
+    "timestamp": "2023-09-15T08:00:00Z",
+    "traceId": "abc-xyz-123",
+    "spanId": "span-456",
+    "commit": "5e5342f",
+    "metadata": {
+      "parentResourceId": "server-5678",
+      "retry_count": 3,
+      "error_code": "CONN_TIMEOUT"
+    }
+  },
+  {
+    "level": "warn",
+    "message": "High memory usage detected: 85% of available memory in use",
+    "resourceId": "server-1234",
+    "timestamp": "2023-09-15T08:05:00Z",
+    "traceId": "def-abc-456",
+    "spanId": "span-789",
+    "commit": "5e5342f",
+    "metadata": {
+      "memory_usage": "85%",
+      "threshold": "80%"
+    }
+  },
+  {
+    "level": "info",
+    "message": "User authentication successful",
+    "resourceId": "auth-service-001",
+    "timestamp": "2023-09-15T08:10:00Z",
+    "traceId": "ghi-def-789",
+    "spanId": "span-101",
+    "commit": "7a8b9c2",
+    "metadata": {
+      "user_id": "user-12345",
+      "login_method": "oauth2"
+    }
+  },
+  {
+    "level": "debug",
+    "message": "Cache miss for key: user_profile_12345",
+    "resourceId": "cache-service-002",
+    "timestamp": "2023-09-15T08:15:00Z",
+    "traceId": "jkl-ghi-012",
+    "spanId": "span-202",
+    "commit": "7a8b9c2",
+    "metadata": {
+      "cache_key": "user_profile_12345",
+      "ttl": 3600
+    }
+  },
+  {
+    "level": "error",
+    "message": "Payment processing failed: Invalid credit card number",
+    "resourceId": "payment-service-003",
+    "timestamp": "2023-09-15T08:20:00Z",
+    "traceId": "mno-jkl-345",
+    "spanId": "span-303",
+    "commit": "9d1e2f3",
+    "metadata": {
+      "payment_id": "pay-67890",
+      "error_type": "validation_error"
+    }
+  },
+  {
+    "level": "info",
+    "message": "Background job completed successfully",
+    "resourceId": "worker-service-004",
+    "timestamp": "2023-09-15T08:25:00Z",
+    "traceId": "pqr-mno-678",
+    "spanId": "span-404",
+    "commit": "9d1e2f3",
+    "metadata": {
+      "job_id": "job-98765",
+      "duration_ms": 2500
+    }
+  }
+]
