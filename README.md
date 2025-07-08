@@ -39,8 +39,13 @@ A comprehensive full-stack application for ingesting, storing, and querying log 
    npm run install-all
    ```
 4. **Start both servers**
+
    ```bash
-   npm start
+   npm start:backend 
+   ```
+   in new terminal
+   ```bash
+   npm start:frontend 
    ```
 
 This will start:
